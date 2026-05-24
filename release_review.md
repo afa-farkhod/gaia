@@ -33,12 +33,12 @@
 > major version bump focused on the permissionless ICS rollout (making consumer chains permissionless and letting validators outside the top 180 participate in cross-chain security)
 > API-breaking and state-breaking
 
-- Discord Announcement
-- Upgrade proposal
-- v20.0.0 release details
+- [Discord Announcement](https://discord.com/channels/669268347736686612/1085152096380260372/1289324152343232572)
+- [Upgrade proposal](https://www.mintscan.io/cosmos/proposals/966)
+- [v20.0.0](https://github.com/cosmos/gaia/releases/tag/v20.0.0) release details
 - `git show v20.0.0` → who tagged? (mpoke)
-- CHANGELOG
-- comparing changes (v19.2.0 vs v20.0.0)
+- [CHANGELOG](https://github.com/cosmos/gaia/blob/v27.3.0/CHANGELOG.md#v2000)
+- [comparing changes](https://github.com/cosmos/gaia/compare/v19.2.0...v20.0.0) (v19.2.0 vs v20.0.0)
 
 ---
 
@@ -48,11 +48,11 @@
 > Binary only release
 > Do not build this binary from source: the security fix is not included in the tagged commit.
 > Gaia has already been privately patched by >2/3 of the voting power - the chain is secure
-> Bump cometbft from v0.38.20 to v0.38.21 to address critical security vulnerability in CometBFT detailed here
+> Bump [cometbft](https://github.com/cometbft/cometbft) from [v0.38.20](https://github.com/cometbft/cometbft/releases/tag/v0.38.21) to v0.38.21 to address critical security vulnerability in CometBFT detailed [here](https://github.com/cometbft/cometbft/security/advisories/GHSA-c32p-wcqj-j677)
 
-- Discord Announcement
-- v25.3.1 release details
-- comparing changes (v25.3.0 vs v25.3.2)
+- [Discord Announcement](https://discord.com/channels/669268347736686612/1085152096380260372/1461088582415548530)
+- [v25.3.1](https://github.com/cosmos/gaia/releases/tag/v25.3.1) release details
+- [comparing changes](https://github.com/cosmos/gaia/compare/v25.3.0...v25.3.2) (v25.3.0 vs v25.3.2)
 
 ---
 
@@ -74,21 +74,21 @@
 
 | Event | Block Height | Time (UTC) |
 |---|---|---|
-| Chain upgrade started | 20739800 | 16:58 (on June 5th, 2024) |
-| Chain upgrade completed | 20739802 | 17:15 |
-| Chain halts | 20740970 | 19:21 |
+| Chain upgrade started | [20739800](https://www.mintscan.io/cosmos/block/20739800) | 16:58 (on June 5th, 2024) |
+| Chain upgrade completed | [20739802](https://www.mintscan.io/cosmos/block/20739802) | 17:15 |
+| Chain halts | [20740970](https://www.mintscan.io/cosmos/block/20740970) | 19:21 |
 | Informed (over Slack) by the Informal Staking team that the chain has halted | chain is halted | 19:46 |
 | Hypha (over Slack) confirms the error in their mainnet node as well | chain is halted | 19:47 |
 | Hypha, the Informal Systems Cosmos Hub team, and Binary Builders meet on Zoom to fix the issue | chain is halted | 20:06 |
-| Fix the issue and cut Cosmos SDK `v0.47.15-ics-lsm` | chain is halted | 21:35 (from `git show v0.47.15-ics-lsm`) |
-| Cut Gaia `v17.2.0` (using Cosmos SDK `v0.47.15-ics-lsm`) | chain is halted | 22:28 (from `git show v17.2.0`) |
-| Published the release binaries after running automated tests | chain is halted | 22:57 (see the action) |
-| Chain resumes | 20740972 | 0:02 (on June 6th, 2024) |
+| Fix the issue and cut Cosmos SDK [v0.47.15-ics-lsm](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.47.15-ics-lsm) | chain is halted | 21:35 (from `git show v0.47.15-ics-lsm`) |
+| Cut Gaia [v17.2.0](https://github.com/cosmos/gaia/releases/tag/v17.2.0) (using Cosmos SDK `v0.47.15-ics-lsm`) | chain is halted | 22:28 (from `git show v17.2.0`) |
+| Published the release binaries after running automated tests | chain is halted | 22:57 (see the [action](https://github.com/cosmos/gaia/actions/runs/9392082523)) |
+| Chain resumes | [20740972](https://www.mintscan.io/cosmos/block/20740972) | 0:02 (on June 6th, 2024) |
 
 The total time the chain was halted was around **4 hours and 40 minutes**.
 
 - [Discord Announcement](https://discord.com/channels/669268347736686612/1085152096380260372/1248009908159516812)
 - [v17.2.0](https://github.com/cosmos/gaia/releases/tag/v17.2.0) release details
 - [comparing changes](https://github.com/cosmos/gaia/compare/v17.1.0...v17.2.0) (v17.1.0 vs v17.2.0)
-comparing changes (v17.1.0 vs v17.2.0)
+- [comparing changes](https://github.com/cosmos/gaia/compare/v17.1.0...v17.2.0) (v17.1.0 vs v17.2.0)
 
