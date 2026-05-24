@@ -1,6 +1,8 @@
 > [!NOTE]
 > working repo: https://github.com/cosmos/gaia
 
+---
+
 ### 1️⃣ Ordinary Upgrade Release:
 
 > [!NOTE]
@@ -58,8 +60,8 @@
 
 > [!NOTE]
 > bug causing the chain halt
-> post-mortem
-> incident occurred slightly after the scheduled v17 software upgrade took place, the upgrade triggered a bug when a validator leaves the active set of validators and another validator takes its place
+> [post-mortem](https://forum.cosmos.network/t/cosmos-hub-v17-1-chain-halt-post-mortem/13899)
+> incident occurred slightly after the scheduled [v17 software upgrade](https://www.mintscan.io/cosmos/proposals/924) took place, the upgrade triggered a bug when a validator leaves the active set of validators and another validator takes its place
 
 ```
 # reference: https://discord.com/channels/669268347736686612/798937713474142229/1248000697589436437
@@ -68,11 +70,25 @@
 2024-06-05 19:21:51: 7:21PM ERR CONSENSUS FAILURE!!! err="more validators than maxValidators found" module=consensus stack="goroutine 1403 
 ```
 
+#### [Timeline](https://forum.cosmos.network/t/cosmos-hub-v17-1-chain-halt-post-mortem/13899#p-31338-timeline-2)
 
+| Event | Block Height | Time (UTC) |
+|---|---|---|
+| Chain upgrade started | 20739800 | 16:58 (on June 5th, 2024) |
+| Chain upgrade completed | 20739802 | 17:15 |
+| Chain halts | 20740970 | 19:21 |
+| Informed (over Slack) by the Informal Staking team that the chain has halted | chain is halted | 19:46 |
+| Hypha (over Slack) confirms the error in their mainnet node as well | chain is halted | 19:47 |
+| Hypha, the Informal Systems Cosmos Hub team, and Binary Builders meet on Zoom to fix the issue | chain is halted | 20:06 |
+| Fix the issue and cut Cosmos SDK `v0.47.15-ics-lsm` | chain is halted | 21:35 (from `git show v0.47.15-ics-lsm`) |
+| Cut Gaia `v17.2.0` (using Cosmos SDK `v0.47.15-ics-lsm`) | chain is halted | 22:28 (from `git show v17.2.0`) |
+| Published the release binaries after running automated tests | chain is halted | 22:57 (see the action) |
+| Chain resumes | 20740972 | 0:02 (on June 6th, 2024) |
 
+The total time the chain was halted was around **4 hours and 40 minutes**.
 
-- Discord Announcement
-- v17.2.0 release details
-
+- [Discord Announcement](https://discord.com/channels/669268347736686612/1085152096380260372/1248009908159516812)
+- [v17.2.0](https://github.com/cosmos/gaia/releases/tag/v17.2.0) release details
+- [comparing changes](https://github.com/cosmos/gaia/compare/v17.1.0...v17.2.0) (v17.1.0 vs v17.2.0)
 comparing changes (v17.1.0 vs v17.2.0)
 
