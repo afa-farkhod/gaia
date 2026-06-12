@@ -1,10 +1,8 @@
 # Cosmos Hub (Gaia) — Reference
 
-> **Current version:** v28.0.0 (module path `github.com/cosmos/gaia/v28`)
+> **Current version:** v27.3.0 (module path `github.com/cosmos/gaia/v27`)
 > **Go version:** 1.25.7 (minimum required)
 > **Binary name:** `gaiad`
-
----
 
 ## Table of Contents
 
@@ -127,22 +125,22 @@ CometBFT consensus
        │
   ┌────┴────────────────┐
   │  AnteHandler chain  │  ← custom: fee market, wasm, IBC, gov vote, provider
-  └────────────────────┘
+  └─────────────────────┘
        │
   ┌────┴────────────────┐
   │   Module Manager    │
   │  (BeginBlock order) │
   │  …all modules…      │
   │  (EndBlock order)   │
-  └────────────────────┘
+  └─────────────────────┘
        │
   ┌────┴────────────────┐
   │  MsgServiceRouter   │  ← routes Msgs to module MsgServers
-  └────────────────────┘
+  └─────────────────────┘
        │
   ┌────┴────────────────┐
   │  PostHandler chain  │  ← feemarket post handler
-  └────────────────────┘
+  └─────────────────────┘
 ```
 
 **Key design principles:**
@@ -880,3 +878,8 @@ gaiad query provider consumer-chains
 ---
 
 *Last updated: 2026-05-08 — tracks Gaia v28.0.0 (module path `github.com/cosmos/gaia/v28`)*
+
+
+---
+|---|---|---|
+| Chain halts (`v17.1.0`) v17.0 does not contain a necessary security fix. Instead of upgrading to v17.0 as described in the proposal, operators will need to upgrade to v17.1.0, which will contain the necessary security fix. reference: [Discord](https://discord.com/channels/669268347736686612/1085152096380260372/1246178911537074287) | [20740970](https://www.mintscan.io/cosmos/block/20740970) | 19:21 |
